@@ -26,9 +26,7 @@ async function main() {
 
   await myNFT.deployed();
 
-  const myAddress = '0x32a9E70324862ef7BF8bA7610AF701822ddE5364'
-  await myNFT.mint(myAddress, 0)
-  console.log("HelloWorld deployed to:", myNFT.address);
+  console.log("myNFT deployed to:", myNFT.address);
 
 }
 
