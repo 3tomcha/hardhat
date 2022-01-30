@@ -13,3 +13,6 @@ npx hardhat node
 node scripts/sample-script.js
 npx hardhat help
 ```
+
+# Succeeded to get NFT Name
+<img width="1671" alt="スクリーンショット 2022-01-30 11 01 59" src="https://user-images.githubusercontent.com/15997287/151683867-042dd09f-ea46-492c-bb81-413715549a58.png">
