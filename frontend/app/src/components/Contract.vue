@@ -15,10 +15,11 @@ export default {
     const helllo = await contract.methods.hello().call()
     console.log(helllo)
 
-    const NFTContractAddress = '0x58a4DEBe005109c6192727966B30808237FCEDB1'
+    const NFTContractAddress = '0x12eCD20dd90B5a06498A1690cF369E1BA3fE9366'
     const KobayashiNFT = await new web3.eth.Contract(myNFT, NFTContractAddress)
     // NFTの名前を表示
     const NFTname = await KobayashiNFT.methods.name().call()
+
     alert(NFTname)
     return {
       contract
