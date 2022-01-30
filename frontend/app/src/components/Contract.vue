@@ -6,6 +6,7 @@
 <script>
 import Web3 from 'web3'
 import helloworld from '../assets/HelloWorld.json'
+import myNFT from '../assets/MyNFT.json'
 export default {
   async setup () {
     const web3 = await new Web3('https://ropsten.infura.io/v3/afbbf905acb14dad8bd872c628058f52')
@@ -13,7 +14,12 @@ export default {
     const contract = await new web3.eth.Contract(helloworld, contractAddress)
     const helllo = await contract.methods.hello().call()
     console.log(helllo)
-    alert(helllo)
+
+    const NFTContractAddress = '0x58a4DEBe005109c6192727966B30808237FCEDB1'
+    const KobayashiNFT = await new web3.eth.Contract(myNFT, NFTContractAddress)
+    // NFTの名前を表示
+    const NFTname = await KobayashiNFT.methods.name().call()
+    alert(NFTname)
     return {
       contract
     }
